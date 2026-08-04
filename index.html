@@ -1,1 +1,1770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyNet WiFi - Fast & Reliable Internet Data, Calls & VPN</title>
+    <meta name="title" content="SkyNet WiFi - Fast & Reliable Internet Data, Calls & VPN">
+    <meta name="description" content="SkyNet WiFi delivers lightning-fast internet data from 500MB to unlimited, a free built-in VPN, crystal-clear voice & video calls, and instant messaging. Experience the future of connectivity today.">
+    <meta name="keywords" content="SkyNet WiFi, buy cheap data Nigeria, fast internet data, free VPN, voice and video calls, SMS, internet bundles, network coverage Nigeria">
+    <meta name="author" content="SkyNet WiFi">
+    <meta name="theme-color" content="#f4f7ff">
+    <meta property="og:title" content="SkyNet WiFi - Fast & Reliable Internet Data, Calls & VPN">
+    <meta property="og:description" content="Lightning-speed data, free built-in VPN, crystal-clear calls and instant messaging — all in one powerful app. Join thousands of happy users worldwide.">
+    <meta property="og:image" content="https://i.imgur.com/0rzaBRf.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:url" id="ogUrl" content="https://www.skynetwifi.com.ng">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SkyNet WiFi - Fast & Reliable Internet Data, Calls & VPN">
+    <meta name="twitter:description" content="Lightning-speed data, free VPN, HD calls and instant messaging in one app. Get connected with SkyNet WiFi.">
+    <meta name="twitter:image" content="https://i.imgur.com/0rzaBRf.jpeg">
+    <link rel="canonical" href="https://www.skynetwifi.com.ng">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/EoRzyvt.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/EoRzyvt.png">
+    <link rel="manifest" href="./manifest.json">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7ff;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: rgba(37, 99, 235, 0.16);
+            color: #0f172a;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #eef2ff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #0ea5e9, #7c3aed);
+            border-radius: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .bg-base {
+            position: fixed;
+            inset: 0;
+            z-index: -3;
+            background: #f4f7ff;
+        }
+
+        .bg-grid {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background-image:
+                linear-gradient(rgba(37, 99, 235, 0.055) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(37, 99, 235, 0.055) 1px, transparent 1px);
+            background-size: 56px 56px;
+            -webkit-mask-image: radial-gradient(ellipse at center, black 25%, transparent 78%);
+            mask-image: radial-gradient(ellipse at center, black 25%, transparent 78%);
+        }
+
+        .bg-aurora {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .aurora {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.5;
+            animation: auroraMove 22s infinite alternate ease-in-out;
+        }
+
+        .aurora.a1 {
+            width: 46vw;
+            height: 46vw;
+            background: #bfdbfe;
+            top: -14%;
+            left: -12%;
+        }
+
+        .aurora.a2 {
+            width: 40vw;
+            height: 40vw;
+            background: #ddd6fe;
+            top: 30%;
+            right: -16%;
+            animation-delay: -6s;
+        }
+
+        .aurora.a3 {
+            width: 34vw;
+            height: 34vw;
+            background: #fbcfe8;
+            bottom: -12%;
+            left: 24%;
+            animation-delay: -12s;
+        }
+
+        .aurora.a4 {
+            width: 28vw;
+            height: 28vw;
+            background: #a5f3fc;
+            top: 55%;
+            left: -8%;
+            opacity: 0.4;
+            animation-delay: -9s;
+        }
+
+        @keyframes auroraMove {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(5vw, 4vh) scale(1.15); }
+            100% { transform: translate(-4vw, -5vh) scale(0.94); }
+        }
+
+        #networkCanvas {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .grad-text {
+            background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 40%, #7c3aed 75%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .pulse-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #10b981;
+            display: inline-block;
+            margin-right: 8px;
+            position: relative;
+        }
+
+        .pulse-dot::after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border-radius: 50%;
+            border: 2px solid rgba(16, 185, 129, 0.5);
+            animation: pulseRing 1.8s infinite ease-out;
+        }
+
+        @keyframes pulseRing {
+            0% { transform: scale(0.6); opacity: 1; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 14px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.68);
+            backdrop-filter: blur(24px) saturate(170%);
+            -webkit-backdrop-filter: blur(24px) saturate(170%);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+            transition: all 0.4s ease;
+        }
+
+        nav .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        nav .logo img {
+            height: 45px;
+            width: auto;
+            filter: drop-shadow(0 4px 14px rgba(37, 99, 235, 0.25));
+            transition: transform 0.3s ease;
+        }
+
+        nav .logo img:hover {
+            transform: scale(1.08);
+        }
+
+        nav .logo span {
+            font-size: 22px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            font-size: 15px;
+            font-weight: 500;
+            color: #334155;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0ea5e9, #7c3aed);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #0f172a;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #0f172a;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 140px 20px 90px;
+            text-align: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 920px;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 26px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            box-shadow: 0 8px 28px rgba(37, 99, 235, 0.08);
+            font-size: 14px;
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 26px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 7vw, 72px);
+            font-weight: 900;
+            line-height: 1.12;
+            margin-bottom: 22px;
+            color: #0f172a;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #475569;
+            max-width: 680px;
+            margin-bottom: 40px;
+            line-height: 1.75;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 17px 42px;
+            border-radius: 60px;
+            background: linear-gradient(135deg, #0ea5e9, #2563eb 55%, #7c3aed);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 35px rgba(37, 99, 235, 0.32);
+            background-size: 200% auto;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 16px 50px rgba(124, 58, 237, 0.42);
+            background-position: right center;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 17px 42px;
+            border-radius: 60px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(15, 23, 42, 0.12);
+            color: #0f172a;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-4px);
+            border-color: rgba(14, 165, 233, 0.5);
+            box-shadow: 0 14px 35px rgba(37, 99, 235, 0.12);
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            margin-top: 60px;
+            width: 100%;
+            max-width: 860px;
+            border-radius: 26px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(18px) saturate(160%);
+            -webkit-backdrop-filter: blur(18px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 30px 70px rgba(15, 23, 42, 0.14);
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: -35px;
+            background: radial-gradient(circle at 25% 25%, rgba(14, 165, 233, 0.18), transparent 60%),
+                        radial-gradient(circle at 75% 75%, rgba(124, 58, 237, 0.18), transparent 60%);
+            filter: blur(40px);
+            z-index: -1;
+            border-radius: 40px;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px;
+            transition: transform 0.6s ease;
+        }
+
+        .hero-image-wrapper:hover img {
+            transform: scale(1.02);
+        }
+
+        .floating-badge {
+            position: absolute;
+            bottom: 28px;
+            left: 28px;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 13px 24px;
+            border-radius: 16px;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.12);
+        }
+
+        .floating-badge i {
+            font-size: 26px;
+            color: #0ea5e9;
+        }
+
+        .floating-badge div span {
+            display: block;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .floating-badge div strong {
+            font-size: 16px;
+            color: #0f172a;
+        }
+
+        .float-chip {
+            position: absolute;
+            z-index: 3;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 11px 20px;
+            border-radius: 14px;
+            font-size: 13px;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+            color: #0f172a;
+            animation: chipFloat 5s infinite ease-in-out;
+        }
+
+        .float-chip i {
+            color: #2563eb;
+        }
+
+        .float-chip.chip-1 {
+            top: 22px;
+            right: 26px;
+        }
+
+        .float-chip.chip-2 {
+            bottom: 30px;
+            right: 34px;
+            animation-delay: -2.5s;
+        }
+
+        .float-chip.chip-2 i {
+            color: #7c3aed;
+        }
+
+        @keyframes chipFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .store-section {
+            padding: 90px 20px;
+            background: linear-gradient(180deg, transparent 0%, rgba(224, 231, 255, 0.5) 50%, transparent 100%);
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 800;
+            margin-bottom: 14px;
+            text-align: center;
+            color: #0f172a;
+        }
+
+        .section-sub {
+            color: #475569;
+            font-size: 16px;
+            margin-bottom: 52px;
+            max-width: 580px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        .store-cards {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .store-card {
+            position: relative;
+            width: 250px;
+            border-radius: 24px;
+            padding: 42px 32px;
+            text-align: center;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(18px) saturate(160%);
+            -webkit-backdrop-filter: blur(18px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .store-card::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 24px;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.6), rgba(124, 58, 237, 0.25) 45%, rgba(236, 72, 153, 0.6));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            opacity: 0.55;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .store-card:nth-child(1)::before {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.6), rgba(14, 165, 233, 0.2) 50%, rgba(14, 165, 233, 0.6));
+        }
+
+        .store-card:nth-child(2)::before {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.6), rgba(236, 72, 153, 0.2) 50%, rgba(236, 72, 153, 0.6));
+        }
+
+        .store-card:nth-child(3)::before {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.6), rgba(37, 99, 235, 0.2) 50%, rgba(37, 99, 235, 0.6));
+        }
+
+        .store-card:hover::before {
+            opacity: 1;
+        }
+
+        .store-card:hover {
+            transform: translateY(-14px) scale(1.03);
+            box-shadow: 0 28px 60px rgba(37, 99, 235, 0.16);
+        }
+
+        .store-card .icon-wrap {
+            width: 76px;
+            height: 76px;
+            margin: 0 auto 22px;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            background: rgba(255, 255, 255, 0.75);
+            transition: all 0.4s ease;
+        }
+
+        .store-card:nth-child(1) .icon-wrap {
+            color: #22c55e;
+            box-shadow: 0 10px 28px rgba(34, 197, 94, 0.18);
+        }
+
+        .store-card:nth-child(2) .icon-wrap {
+            color: #7c3aed;
+            box-shadow: 0 10px 28px rgba(124, 58, 237, 0.2);
+        }
+
+        .store-card:nth-child(3) .icon-wrap {
+            color: #0ea5e9;
+            box-shadow: 0 10px 28px rgba(14, 165, 233, 0.18);
+        }
+
+        .store-card:hover .icon-wrap {
+            transform: scale(1.12) rotate(-6deg);
+        }
+
+        .store-card h3 {
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #0f172a;
+        }
+
+        .store-card p {
+            font-size: 13px;
+            color: #64748b;
+            margin-bottom: 22px;
+        }
+
+        .store-card .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 30px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: rgba(15, 23, 42, 0.05);
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            color: #0f172a;
+        }
+
+        .store-card:hover .download-btn {
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+            border-color: transparent;
+            color: #fff;
+            box-shadow: 0 8px 28px rgba(37, 99, 235, 0.35);
+        }
+
+        .features {
+            padding: 90px 20px;
+            background: linear-gradient(180deg, transparent 0%, rgba(254, 242, 255, 0.5) 50%, transparent 100%);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            position: relative;
+            border-radius: 20px;
+            padding: 36px 26px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(16px) saturate(150%);
+            -webkit-backdrop-filter: blur(16px) saturate(150%);
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.07);
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 12%;
+            width: 76%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #0ea5e9, #7c3aed, transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.1), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .feature-card:hover::after,
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(14, 165, 233, 0.3);
+            box-shadow: 0 20px 48px rgba(37, 99, 235, 0.13);
+        }
+
+        .feature-card .feat-icon {
+            position: relative;
+            width: 68px;
+            height: 68px;
+            margin: 0 auto 22px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: #fff;
+            transition: all 0.5s ease;
+        }
+
+        .feature-card:nth-child(1) .feat-icon {
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+            box-shadow: 0 10px 28px rgba(14, 165, 233, 0.32);
+        }
+
+        .feature-card:nth-child(2) .feat-icon {
+            background: linear-gradient(135deg, #7c3aed, #d946ef);
+            box-shadow: 0 10px 28px rgba(124, 58, 237, 0.32);
+        }
+
+        .feature-card:nth-child(3) .feat-icon {
+            background: linear-gradient(135deg, #06b6d4, #2563eb);
+            box-shadow: 0 10px 28px rgba(6, 182, 212, 0.32);
+        }
+
+        .feature-card:nth-child(4) .feat-icon {
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            box-shadow: 0 10px 28px rgba(168, 85, 247, 0.32);
+        }
+
+        .feature-card:nth-child(5) .feat-icon {
+            background: linear-gradient(135deg, #10b981, #0ea5e9);
+            box-shadow: 0 10px 28px rgba(16, 185, 129, 0.32);
+        }
+
+        .feature-card:nth-child(6) .feat-icon {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            box-shadow: 0 10px 28px rgba(245, 158, 11, 0.32);
+        }
+
+        .feature-card:hover .feat-icon {
+            transform: rotateY(180deg) scale(1.05);
+        }
+
+        .feature-card h3 {
+            position: relative;
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .feature-card p {
+            position: relative;
+            font-size: 14px;
+            color: #52647c;
+            line-height: 1.7;
+        }
+
+        .showcase {
+            padding: 90px 20px;
+            background: linear-gradient(180deg, transparent 0%, rgba(240, 249, 255, 0.6) 50%, transparent 100%);
+        }
+
+        .showcase-item {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 100px;
+            flex-wrap: wrap;
+        }
+
+        .showcase-item.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .showcase-item .text-side {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .showcase-item .text-side .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 18px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            font-size: 12px;
+            font-weight: 600;
+            color: #2563eb;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.08);
+        }
+
+        .showcase-item .text-side h2 {
+            font-size: clamp(24px, 3vw, 34px);
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.25;
+            color: #0f172a;
+        }
+
+        .showcase-item .text-side p {
+            font-size: 15px;
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 22px;
+        }
+
+        .showcase-item .text-side ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .showcase-item .text-side ul li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: #334155;
+            margin-bottom: 13px;
+        }
+
+        .showcase-item .text-side ul li i {
+            color: #10b981;
+            font-size: 16px;
+        }
+
+        .img-side {
+            position: relative;
+            flex: 1;
+            min-width: 280px;
+            border-radius: 24px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(14px) saturate(150%);
+            -webkit-backdrop-filter: blur(14px) saturate(150%);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 24px 55px rgba(15, 23, 42, 0.12);
+            transition: all 0.5s ease;
+        }
+
+        .img-side::before {
+            content: '';
+            position: absolute;
+            inset: -28px;
+            background: radial-gradient(circle at 30% 30%, rgba(14, 165, 233, 0.16), transparent 60%),
+                        radial-gradient(circle at 70% 70%, rgba(124, 58, 237, 0.16), transparent 60%);
+            filter: blur(35px);
+            z-index: -1;
+            border-radius: 40px;
+        }
+
+        .img-side:hover {
+            transform: scale(1.02);
+            border-color: rgba(14, 165, 233, 0.35);
+            box-shadow: 0 30px 70px rgba(37, 99, 235, 0.16);
+        }
+
+        .img-side img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px;
+            transition: transform 0.6s ease;
+        }
+
+        .img-side:hover img {
+            transform: scale(1.04);
+        }
+
+        .speed-section {
+            padding: 90px 20px;
+            background: linear-gradient(180deg, transparent 0%, rgba(238, 242, 255, 0.6) 50%, transparent 100%);
+            text-align: center;
+        }
+
+        .speed-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .speed-card {
+            position: relative;
+            border-radius: 20px;
+            padding: 36px 20px;
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.45));
+            backdrop-filter: blur(16px) saturate(150%);
+            -webkit-backdrop-filter: blur(16px) saturate(150%);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.07);
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .speed-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 100%, rgba(124, 58, 237, 0.14), transparent 65%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .speed-card:hover::before {
+            opacity: 1;
+        }
+
+        .speed-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(124, 58, 237, 0.3);
+            box-shadow: 0 20px 48px rgba(124, 58, 237, 0.15);
+        }
+
+        .speed-card .num {
+            position: relative;
+            font-size: 44px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #0ea5e9, #2563eb 50%, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .speed-card .label {
+            position: relative;
+            font-size: 14px;
+            color: #52647c;
+            margin-top: 8px;
+        }
+
+        .speed-img-wrap {
+            position: relative;
+            margin-top: 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 24px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 24px 55px rgba(15, 23, 42, 0.12);
+        }
+
+        .speed-img-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px;
+            transition: transform 0.6s ease;
+        }
+
+        .speed-img-wrap:hover img {
+            transform: scale(1.02);
+        }
+
+        .support {
+            padding: 90px 20px;
+            background: linear-gradient(180deg, transparent 0%, rgba(255, 241, 246, 0.5) 50%, transparent 100%);
+            text-align: center;
+        }
+
+        .support-cards {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 45px;
+        }
+
+        .support-card {
+            width: 300px;
+            border-radius: 22px;
+            padding: 38px 30px;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(18px) saturate(160%);
+            -webkit-backdrop-filter: blur(18px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+            transition: all 0.4s ease;
+        }
+
+        .support-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(14, 165, 233, 0.3);
+            box-shadow: 0 22px 55px rgba(37, 99, 235, 0.15);
+        }
+
+        .support-card .sup-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .support-card:nth-child(1) .sup-icon {
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+            box-shadow: 0 10px 28px rgba(14, 165, 233, 0.32);
+        }
+
+        .support-card:nth-child(2) .sup-icon {
+            background: linear-gradient(135deg, #7c3aed, #d946ef);
+            box-shadow: 0 10px 28px rgba(124, 58, 237, 0.32);
+        }
+
+        .support-card:nth-child(3) .sup-icon {
+            background: linear-gradient(135deg, #06b6d4, #10b981);
+            box-shadow: 0 10px 28px rgba(6, 182, 212, 0.32);
+        }
+
+        .support-card h3 {
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 9px;
+            color: #0f172a;
+        }
+
+        .support-card p {
+            font-size: 14px;
+            color: #52647c;
+            line-height: 1.7;
+        }
+
+        .contact-section {
+            padding: 90px 20px;
+            background: linear-gradient(180deg, transparent 0%, rgba(230, 240, 255, 0.55) 50%, transparent 100%);
+        }
+
+        .contact-grid {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 280px;
+            border-radius: 24px;
+            padding: 34px 30px;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(18px) saturate(160%);
+            -webkit-backdrop-filter: blur(18px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+        }
+
+        .contact-info .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 26px;
+        }
+
+        .contact-info .info-item i {
+            font-size: 20px;
+            color: #2563eb;
+            margin-top: 3px;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(37, 99, 235, 0.09);
+            border: 1px solid rgba(37, 99, 235, 0.16);
+            flex-shrink: 0;
+        }
+
+        .contact-info .info-item h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 3px;
+            color: #0f172a;
+        }
+
+        .contact-info .info-item p {
+            font-size: 14px;
+            color: #52647c;
+        }
+
+        .contact-info .info-item a {
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .partner-box {
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 20px;
+            background: linear-gradient(160deg, rgba(14, 165, 233, 0.08), rgba(124, 58, 237, 0.07));
+            border: 1px solid rgba(37, 99, 235, 0.14);
+        }
+
+        .partner-box h4 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #0f172a;
+        }
+
+        .partner-box h4 i {
+            color: #2563eb;
+            margin-right: 8px;
+        }
+
+        .partner-box p {
+            font-size: 14px;
+            color: #52647c;
+        }
+
+        .partner-box a {
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .contact-map {
+            flex: 1;
+            min-width: 280px;
+            border-radius: 24px;
+            padding: 10px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+        }
+
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 16px;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 42px 20px 26px;
+            border-top: 1px solid rgba(15, 23, 42, 0.06);
+            text-align: center;
+        }
+
+        footer .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        footer .footer-logo img {
+            height: 35px;
+            filter: drop-shadow(0 4px 12px rgba(37, 99, 235, 0.22));
+        }
+
+        footer .footer-logo span {
+            font-size: 20px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        footer .social-links {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            margin: 18px 0;
+        }
+
+        footer .social-links a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(15, 23, 42, 0.04);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #475569;
+            transition: all 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            background: linear-gradient(135deg, #0ea5e9, #7c3aed);
+            color: #fff;
+            transform: translateY(-4px);
+            border-color: transparent;
+            box-shadow: 0 10px 28px rgba(14, 165, 233, 0.3);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 50px;
+            right: 25px;
+            z-index: 9999;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            animation: pulseWhatsApp 2.5s infinite ease-in-out;
+        }
+
+        .whatsapp-float img {
+            width: 54px;
+            height: 54px;
+            
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.12);
+            box-shadow: 0 14px 45px rgba(37, 211, 102, 0.55);
+        }
+
+        .whatsapp-float .tooltip {
+            position: absolute;
+            right: 74px;
+            top: 50%;
+            transform: translateY(-50%);
+            
+            color: #fff;
+            padding: 9px 18px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25);
+        }
+
+        .whatsapp-float:hover .tooltip {
+            opacity: 1;
+            right: 80px;
+        }
+
+        @keyframes pulseWhatsApp {
+            0%, 100% { transform: scale(1); box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4); }
+            50% { transform: scale(1.06); box-shadow: 0 12px 45px rgba(37, 211, 102, 0.55); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 12px 20px;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 260px;
+                height: 100vh;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(24px);
+                -webkit-backdrop-filter: blur(24px);
+                flex-direction: column;
+                padding: 85px 30px 30px;
+                gap: 26px;
+                transition: right 0.4s ease;
+                border-left: 1px solid rgba(15, 23, 42, 0.07);
+                box-shadow: -20px 0 60px rgba(15, 23, 42, 0.1);
+            }
+
+            nav ul.active {
+                right: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .showcase-item,
+            .showcase-item.reverse {
+                flex-direction: column;
+                gap: 34px;
+            }
+
+            .float-chip {
+                display: none;
+            }
+
+            .floating-badge {
+                left: 16px;
+                bottom: 16px;
+                padding: 10px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                padding: 14px 28px;
+                font-size: 14px;
+            }
+
+            .store-card {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-base"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-aurora">
+        <div class="aurora a1"></div>
+        <div class="aurora a2"></div>
+        <div class="aurora a3"></div>
+        <div class="aurora a4"></div>
+    </div>
+    <canvas id="networkCanvas"></canvas>
+
+    <nav>
+        <div class="logo">
+            <img src="https://i.imgur.com/EoRzyvt.png" alt="SkyNet WiFi Logo" onerror="this.src='https://i.imgur.com/qIcghfY.png';this.style.height='40px';this.style.width='auto';this.style.objectFit='contain';">
+            <span>SkyNet WiFi</span>
+        </div>
+        <ul id="navMenu">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#showcase">Showcase</a></li>
+            <li><a href="#speed">Speed</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="document.getElementById('navMenu').classList.toggle('active')">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    Next-Gen Network &bull; Live Now
+                </div>
+                <h1>Own the Internet with <span class="grad-text">SkyNet WiFi</span></h1>
+                <p>Lightning-speed data from 500MB to unlimited, a free built-in VPN, crystal-clear voice &amp; video calls, and instant messaging — all in one powerful app built for the modern Nigerian internet user.</p>
+                <div class="hero-buttons">
+                    <a href="#stores" class="btn-primary"><i class="fas fa-download"></i> Download App</a>
+                    <a href="#features" class="btn-secondary"><i class="fas fa-play-circle"></i> See Features</a>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <img src="https://i.imgur.com/qIcghfY.png" alt="SkyNet WiFi Banner" onerror="this.src='https://i.imgur.com/0rzaBRf.jpeg'">
+                    <div class="floating-badge">
+                        <i class="fas fa-wifi"></i>
+                        <div>
+                            <strong>4.9 &#9733;</strong>
+                            <span>50K+ Active Users</span>
+                        </div>
+                    </div>
+                    <div class="float-chip chip-1">
+                        <i class="fas fa-bolt"></i> 5G Ready
+                    </div>
+                    <div class="float-chip chip-2">
+                        <i class="fas fa-shield-alt"></i> VPN Included
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="store-section" id="stores">
+        <div class="container">
+            <h2 class="section-title reveal">Download <span class="grad-text">SkyNet WiFi</span> Now</h2>
+            <p class="section-sub reveal">Get the app on your favorite platform and start enjoying fast, affordable internet data with a free VPN, calling and messaging features.</p>
+            <div class="store-cards">
+                <div class="store-card reveal" onclick="window.open('https://play.google.com/store/apps/details?id=com.skynetwifi','_blank')">
+                    <div class="icon-wrap"><i class="fab fa-google-play"></i></div>
+                    <h3>Google Play</h3>
+                    <p>Android Phones &amp; Tablets</p>
+                    <span class="download-btn"><i class="fas fa-download"></i> Download</span>
+                </div>
+                <div class="store-card reveal" onclick="window.open('https://apps.apple.com/app/id123456789','_blank')">
+                    <div class="icon-wrap"><i class="fab fa-apple"></i></div>
+                    <h3>App Store</h3>
+                    <p>iPhone &amp; iPad</p>
+                    <span class="download-btn"><i class="fas fa-download"></i> Download</span>
+                </div>
+                <div class="store-card reveal" onclick="window.open('https://www.microsoft.com/store/apps/9XXXXX','_blank')">
+                    <div class="icon-wrap"><i class="fab fa-windows"></i></div>
+                    <h3>Microsoft Store</h3>
+                    <p>Windows PC &amp; Laptop</p>
+                    <span class="download-btn"><i class="fas fa-download"></i> Download</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title reveal">Everything You Need in <span class="grad-text">One App</span></h2>
+            <p class="section-sub reveal">SkyNet WiFi is more than just data. It is your complete communication and internet companion with powerful features built right in.</p>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feat-icon"><i class="fas fa-wifi"></i></div>
+                    <h3>Buy Internet Data</h3>
+                    <p>Purchase data from 500MB up to unlimited GB. Fast activation, competitive prices, and reliable network coverage you can trust.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feat-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Free Built-in VPN</h3>
+                    <p>Browse securely and anonymously with our integrated VPN. Every user gets free access to protect their privacy online.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feat-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Voice &amp; Video Calls</h3>
+                    <p>Make crystal-clear voice and video calls to anyone in your contacts. High quality, low latency, and absolutely free.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feat-icon"><i class="fas fa-comment-dots"></i></div>
+                    <h3>Send SMS &amp; Chat</h3>
+                    <p>Send text messages directly from the app to any contact. Stay connected with friends and family at no extra cost.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feat-icon"><i class="fas fa-users"></i></div>
+                    <h3>See Active Contacts</h3>
+                    <p>See which of your contacts are online and using SkyNet WiFi. Call, message, or video chat with a single tap.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feat-icon"><i class="fas fa-headset"></i></div>
+                    <h3>24/7 Customer Care</h3>
+                    <p>Our support team is available round the clock. We value every customer and respond fast to every request.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase" id="showcase">
+        <div class="container">
+
+            <div class="showcase-item reveal">
+                <div class="text-side">
+                    <div class="tag"><i class="fas fa-bolt"></i> Lightning Fast Network</div>
+                    <h2>How <span class="grad-text">SkyNet WiFi</span> Delivers Internet to Your Device</h2>
+                    <p>Our advanced network infrastructure ensures data flows from our high-speed servers directly to your phone, tablet, or computer with minimal latency. Whether you are streaming, browsing, or video calling, SkyNet WiFi gives you a smooth and reliable connection every time.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> High-speed data delivery from 500MB to unlimited GB</li>
+                        <li><i class="fas fa-check-circle"></i> Optimized routing for low latency and fast speeds</li>
+                        <li><i class="fas fa-check-circle"></i> Works seamlessly on 3G, 4G, LTE, and 5G networks</li>
+                        <li><i class="fas fa-check-circle"></i> Encrypted VPN tunnel for total security</li>
+                    </ul>
+                </div>
+                <div class="img-side">
+                    <img src="https://i.imgur.com/0zJw5rf.png" alt="SkyNet WiFi Network Flow">
+                </div>
+            </div>
+
+            <div class="showcase-item reverse reveal">
+                <div class="text-side">
+                    <div class="tag"><i class="fas fa-video"></i> Crystal Clear Calls</div>
+                    <h2>Stay Close with <span class="grad-text">Video Calls</span> from Anywhere</h2>
+                    <p>With SkyNet WiFi, you can make high-quality video calls to anyone, anywhere. See the smiles, hear the laughter — feel like you are in the same room even when you are miles apart. Our app makes long-distance communication feel natural and effortless.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> HD video call quality with adaptive bitrate</li>
+                        <li><i class="fas fa-check-circle"></i> Works on both WiFi and mobile data</li>
+                        <li><i class="fas fa-check-circle"></i> See who is online and call with one tap</li>
+                        <li><i class="fas fa-check-circle"></i> Group video calls supported</li>
+                    </ul>
+                </div>
+                <div class="img-side">
+                    <img src="https://i.imgur.com/EF7RCz2.jpeg" alt="SkyNet WiFi Video Calls">
+                </div>
+            </div>
+
+            <div class="showcase-item reveal">
+                <div class="text-side">
+                    <div class="tag"><i class="fas fa-comment"></i> Instant Messaging</div>
+                    <h2>Send <span class="grad-text">Messages &amp; SMS</span> Directly to Your Contacts</h2>
+                    <p>SkyNet WiFi lets you send text messages instantly to anyone in your contact list. Whether it is a quick hello or an important update, your messages are delivered fast and reliably. You can also send traditional SMS right from the app.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Instant in-app messaging with read receipts</li>
+                        <li><i class="fas fa-check-circle"></i> Send SMS directly to any phone number</li>
+                        <li><i class="fas fa-check-circle"></i> Group chats and media sharing supported</li>
+                        <li><i class="fas fa-check-circle"></i> Messages are end-to-end encrypted</li>
+                    </ul>
+                </div>
+                <div class="img-side">
+                    <img src="https://i.imgur.com/28CokKY.jpeg" alt="SkyNet WiFi Messaging">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="speed-section" id="speed">
+        <div class="container">
+            <h2 class="section-title reveal">Blazing Fast <span class="grad-text">Internet Speed</span> &amp; Performance</h2>
+            <p class="section-sub reveal">Experience the power of SkyNet WiFi — speed, reliability, and coverage you can count on every single day.</p>
+
+            <div class="speed-grid">
+                <div class="speed-card reveal">
+                    <div class="num">4.9</div>
+                    <div class="label">Average User Rating &#9733;</div>
+                </div>
+                <div class="speed-card reveal">
+                    <div class="num">50K+</div>
+                    <div class="label">Active Users Worldwide</div>
+                </div>
+                <div class="speed-card reveal">
+                    <div class="num">99.9%</div>
+                    <div class="label">Network Uptime</div>
+                </div>
+                <div class="speed-card reveal">
+                    <div class="num">&#8734;</div>
+                    <div class="label">Unlimited Data Options</div>
+                </div>
+            </div>
+
+            <div class="speed-img-wrap reveal">
+                <img src="https://i.imgur.com/smFj5Br.jpeg" alt="SkyNet WiFi Speed and Data">
+            </div>
+        </div>
+    </section>
+
+    <section class="support" id="support">
+        <div class="container">
+            <h2 class="section-title reveal">We Care About <span class="grad-text">Every Customer</span></h2>
+            <p class="section-sub reveal">Our dedicated support team is here for you 24/7. We listen, we respond, and we solve your problems fast.</p>
+            <div class="support-cards">
+                <div class="support-card reveal">
+                    <div class="sup-icon"><i class="fas fa-headset"></i></div>
+                    <h3>24/7 Customer Care</h3>
+                    <p>We are always available to help. Reach out anytime and get a quick response from our friendly support team.</p>
+                </div>
+                <div class="support-card reveal">
+                    <div class="sup-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Secure &amp; Private</h3>
+                    <p>Your privacy is our priority. All your data, calls, and messages are protected with strong encryption.</p>
+                </div>
+                <div class="support-card reveal">
+                    <div class="sup-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Satisfaction Guaranteed</h3>
+                    <p>We are committed to your happiness. If you are not satisfied, we will make it right — no questions asked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title reveal">Get in <span class="grad-text">Touch</span> With Us</h2>
+            <p class="section-sub reveal">Visit our office, call us, or send a message. We are always happy to hear from you.</p>
+
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Our Address</h4>
+                            <p>AA Master Block C Shop Number 22, Katin Daji, Tudun Wada, Gusau, Zamfara State, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+2348166836059">+234 816 683 6059</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:support@skynetwifi.com">support@skynetwifi.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="partner-box">
+                        <h4><i class="fas fa-briefcase"></i> Business Partnerships</h4>
+                        <p>Are you interested in partnering with SkyNet WiFi? We welcome businesses, resellers, and agents. Contact us today to discuss collaboration opportunities. Call <a href="tel:+2348166836059">+234 816 683 6059</a> or email us.</p>
+                    </div>
+                </div>
+
+                <div class="contact-map reveal">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15627.72563474366!2d6.6587265!3d12.1708695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11a4e2b8c9a3b6a1%3A0x1234567890abcdef!2sGusau%2C%20Zamfara!5e0!3m2!1sen!2sng!4v1680000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="https://i.imgur.com/EoRzyvt.png" alt="SkyNet WiFi" onerror="this.style.display='none'">
+                <span>SkyNet WiFi</span>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2026 SkyNet WiFi. All rights reserved. Fast, affordable internet data for everyone.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/2348166836059?text=Hello%20SkyNet%20WiFi%2C%20I%20want%20to%20know%20more%20about%20your%20services" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp.png">
+        <img src="https://i.imgur.com/kizjtgO.png" alt="WhatsApp" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 48 48%27%3E%3Cpath fill=%27%23fff%27 d=%27M24 2C11.3 2 1 12.3 1 25c0 4.8 1.6 9.3 4.3 13L2 46l8.8-3.3C14.3 45.2 19 47 24 47c12.7 0 23-10.3 23-23S36.7 2 24 2zm0 41.5c-4.5 0-8.7-1.5-12-4l-.7-.5-5.2 2 1.7-5-.4-.7C5.5 33.5 4 29 4 25 4 14.5 13.1 5.5 24 5.5S44 14.5 44 25 34.9 43.5 24 43.5zm10.5-12.4c-.6-.3-3.4-1.7-3.9-1.9-.5-.2-.9-.3-1.3.3-.4.6-1.5 1.9-1.8 2.3-.3.4-.6.4-1.2.1-.6-.3-2.5-.9-4.7-2.9-1.7-1.6-2.9-3.6-3.2-4.2-.3-.6-.1-.9.2-1.2.3-.3.6-.7.9-1 .3-.3.4-.6.6-1 .2-.4.1-.8-.1-1.1-.2-.3-1.3-3.1-1.8-4.2-.5-1.2-1-.9-1.3-1h-1.1c-.4 0-1 .1-1.5.8-.5.6-2 1.9-2 4.7s2.1 5.5 2.4 5.9c.3.4 4.1 6.2 9.9 8.7 5.8 2.5 5.8 1.7 6.9 1.6 1.1-.1 3.4-1.4 3.9-2.7.5-1.3.5-2.5.4-2.7-.1-.3-.6-.4-1.1-.7z%27/%3E%3C/svg%3E'">
+        <span class="tooltip">Chat with us on WhatsApp</span>
+    </a>
+
+    <script>
+        document.getElementById('ogUrl').setAttribute('content', location.href);
+
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+
+        (function() {
+            const canvas = document.getElementById('networkCanvas');
+            const ctx = canvas.getContext('2d');
+            let w, h;
+            const nodes = [];
+            const colors = ['37,99,235', '14,165,233', '124,58,237', '236,72,153'];
+
+            function resize() {
+                w = canvas.width = window.innerWidth;
+                h = canvas.height = window.innerHeight;
+            }
+
+            window.addEventListener('resize', resize);
+            resize();
+
+            const count = Math.min(70, Math.max(40, Math.floor(window.innerWidth / 20)));
+
+            for (let i = 0; i < count; i++) {
+                nodes.push({
+                    x: Math.random() * w,
+                    y: Math.random() * h,
+                    vx: (Math.random() - 0.5) * 0.35,
+                    vy: (Math.random() - 0.5) * 0.35,
+                    r: Math.random() * 1.8 + 0.8,
+                    c: colors[Math.floor(Math.random() * colors.length)]
+                });
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, w, h);
+
+                for (const n of nodes) {
+                    n.x += n.vx;
+                    n.y += n.vy;
+                    if (n.x < 0 || n.x > w) n.vx *= -1;
+                    if (n.y < 0 || n.y > h) n.vy *= -1;
+                    ctx.beginPath();
+                    ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(' + n.c + ',0.65)';
+                    ctx.fill();
+                }
+
+                for (let i = 0; i < nodes.length; i++) {
+                    for (let j = i + 1; j < nodes.length; j++) {
+                        const a = nodes[i];
+                        const b = nodes[j];
+                        const dx = a.x - b.x;
+                        const dy = a.y - b.y;
+                        const d = dx * dx + dy * dy;
+                        if (d < 15000) {
+                            ctx.beginPath();
+                            ctx.moveTo(a.x, a.y);
+                            ctx.lineTo(b.x, b.y);
+                            ctx.strokeStyle = 'rgba(37,99,235,' + (0.14 * (1 - d / 15000)) + ')';
+                            ctx.lineWidth = 0.6;
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                requestAnimationFrame(draw);
+            }
+
+            draw();
+        })();
+
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(el => observer.observe(el));
+
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                nav.style.background = 'rgba(255,255,255,0.88)';
+                nav.style.boxShadow = '0 4px 30px rgba(15,23,42,0.08)';
+            } else {
+                nav.style.background = 'rgba(255,255,255,0.68)';
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
