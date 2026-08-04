@@ -1,0 +1,49 @@
+name: skynet_wifi_app
+description: SkyNet WiFi Pure Mobile Communication and Networking App.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  supabase_flutter: ^2.0.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  dio: ^5.4.3
+  flutter_screenutil: ^5.9.0
+  font_awesome_flutter: ^10.7.0
+  telephony: ^0.2.0
+  flutter_contacts: ^1.1.9
+  flutter_background_service: ^5.0.0
+  system_alert_window: ^1.4.0
+  permission_handler: ^11.3.0
+  flutter_svg: ^2.0.9
+  flutter_webrtc: ^0.10.4
+  path_provider: ^2.1.2
+  flutter_tts: ^3.8.5
+  web_socket_channel: ^2.4.1
+  url_launcher: ^6.2.5
+  connectivity_plus: ^5.0.2
+  network_info_plus: ^5.0.2
+  image_picker: ^1.0.7
+  intl: ^0.19.0
+  crypto: ^3.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/logo.png
+    - assets/images/welcome.png
+    - assets/images/icon.png
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/icon.png"
